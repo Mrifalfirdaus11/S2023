@@ -38,7 +38,7 @@ License: For each use you must have a valid license purchased only from above li
     <meta property="og:url" content="https://keenthemes.com/metronic">
     <meta property="og:site_name" content="Keenthemes | Metronic">
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8">
-    <link rel="shortcut icon" href="{{ asset('/metronic8/demo8/assets/media/logos/sadataLogo.png') }}">
+    <link rel="shortcut icon" href="{{ asset('media/logos/sadataLogo.png') }}">
 
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
@@ -47,30 +47,22 @@ License: For each use you must have a valid license purchased only from above li
     <!--Font awesome-->
 
     <!--begin::Vendor Stylesheets(used for this page only)-->
-    <link href="{{ asset('/metronic8/demo8/assets/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet"
-        type="text/css">
+    <link href="{{ asset('plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css">
     <!--end::Vendor Stylesheets-->
 
 
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-    <link href="{{ asset('/metronic8/demo8/assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet"
-        type="text/css">
-    <link href="{{ asset('/metronic8/demo8/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css">
-</head>
-
-<body id="kt_body" class="aside-enabled">
-    {{-- <link href="{{ asset('/metronic8/demo8/assets/css/style.bundle.rtl.css') }}" rel="stylesheet" type="text/css">
-    --}}
-    <link href="{{ asset('/metronic8/demo8/assets/css/edit.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('/metronic8/demo8/assets/css/custom.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('/metronic8/demo8/assets/css/dropdown.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('/metronic8/demo8/assets/css/style.bundle.css.map') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/style.bundle.css.map') }}" rel="stylesheet" type="text/css">
     <!--end::Global Stylesheets Bundle-->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
         integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--Begin::Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -87,6 +79,7 @@ License: For each use you must have a valid license purchased only from above li
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-5FS8GGP');
+
     </script>
     <!--End::Google Tag Manager -->
 
@@ -95,14 +88,14 @@ License: For each use you must have a valid license purchased only from above li
         if (window.top != window.self) {
             window.top.location.replace(window.self.location.href);
         }
+
     </script>
 
-    <!--end::Head-->
 
-    <!--begin::Body-->
+</head>
 
+<body id="kt_body" class="aside-enabled">
 
-    <!--begin::Theme mode setup on page load-->
     <script>
         var defaultThemeMode = "light";
         var themeMode;
@@ -124,6 +117,7 @@ License: For each use you must have a valid license purchased only from above li
 
             document.documentElement.setAttribute("data-bs-theme", themeMode);
         }
+
     </script>
     <!--end::Theme mode setup on page load-->
     <!--Begin::Google Tag Manager (noscript) -->
@@ -1185,8 +1179,7 @@ License: For each use you must have a valid license purchased only from above li
                     <div class="header-brand">
                         <!--begin::Logo-->
                         <a href="#">
-                            <img src="{{ asset('/metronic8/demo8/assets/media/logos/sadata.png') }}" alt="" class=""
-                                style="height: 34px">
+                            <img src="{{ asset('media/logos/sadata.png') }}" alt="" class="" style="height: 34px">
                         </a>
                         <!--end::Logo-->
                         <!--begin::Aside minimize-->
@@ -1304,8 +1297,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="d-flex align-items-center">
                                     <!--begin::Theme mode docs-->
 
-                                    <img src="{{ asset('/metronic8/demo8/assets/media/avatars/profiles.png') }}" alt=""
-                                        class="" style="height: 36px" data-kt-menu-trigger="click"
+                                    <img src="{{ asset('media/avatars/profiles.png') }}" alt="" class=""
+                                        style="height: 36px" data-kt-menu-trigger="click"
                                         data-kt-menu-placement="bottom-end">
                                     <!--end::Theme mode docs-->
 
@@ -1350,7 +1343,1613 @@ License: For each use you must have a valid license purchased only from above li
 
                 <!--end::Header-->
                 <!--begin::Content-->
-              
+                <div class="content d-flex flex-column flex-column-fluid " id="kt_content">
+                    <!--begin::Post-->
+                    <div class="post d-flex flex-column-fluid" id="kt_post">
+                        <!--begin::Container-->
+                        <div id="kt_content_container" class=" container-xxl ">
+                            <!--begin::Row-->
+                            <!--begin::Tables Widget 2-->
+                            <div class="row mb-8 justify-content-between">
+                                <h1 style="width: fit-content" class="mb-5">Stock Report</h1>
+                                <div class="d-flex gap-4 w-700px justify-content-start flex-wrap">
+                                    <a href="#"
+                                        class="btn fs-4 w-50px w-md-150px h-45px btn-white text-center text-dark border border-gray-500 d-flex align-items-center justify-content-evenly">
+                                        <i class="fa-solid fa-upload text-center fs-4 text-gray-800"></i>
+                                        <em class="d-none d-md-flex">Upload</em></a>
+
+                                    <div class="dropdown ">
+                                        <a class="btn fs-4 w-200px w-md-250px h-45px btn-white text-center text-dark border border-gray-500 d-flex align-items-center justify-content-evenly"
+                                            href="#" role="button" data-bs-toggle="modal" data-bs-target="#kt_modal_1">
+                                            <i class="fa-solid fa-download fs-4 text-gray-800"></i>
+                                            <em class="d-none d-md-flex">Download Laporan</em>
+                                            <em class="d-flex d-md-none">Download</em>
+                                        </a>
+
+
+                                        <!--begin::Modal-->
+                                        <div class="modal fade" tabindex="-1" id="kt_modal_1">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Modal title</h5>
+
+                                                        <!--begin::Close-->
+                                                        <div class="btn btn-icon btn-sm btn-active-light-primary ms-2"
+                                                            data-bs-dismiss="modal" aria-label="Close">
+                                                            <span class="svg-icon fs-2x"></span>
+                                                        </div>
+                                                        <!--end::Close-->
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <div class="mb-0">
+                                                            <label for="" class="form-label">Select date</label>
+                                                            <input class="form-control form-control-solid"
+                                                                placeholder="Pick date" id="kt_datepicker_10" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-light"
+                                                            data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save
+                                                            changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::Modal-->
+                                    </div>
+
+
+                                    <div
+                                        class="w-250px btn btn-white d-flex border border-gray-500 py-0 align-items-center justify-content-evenly">
+                                        <i class="fa-regular fa-calendar fs-4 text-gray-800"></i>
+                                        <input class="btn btn-white w-200px bg-white" placeholder="Pick date rage"
+                                            id="kt_daterangepicker_1" />
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="card card-xl-stretch mb-5 mb-xl-8 ">
+                                <!--begin::Header-->
+                                <div>
+
+                                    <div class="card-toolbar">
+                                        <!--begin::Menu-->
+
+                                        <!--begin::Menu 1-->
+                                        <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px"
+                                            data-kt-menu="true" id="kt_menu_64eeaa5617910">
+                                            <!--begin::Header-->
+                                            <div class="px-7 py-5">
+                                                <div class="fs-5 text-dark fw-bold">Filter Options</div>
+                                            </div>
+                                            <!--end::Header-->
+
+                                            <!--begin::Menu separator-->
+                                            <div class="separator border-gray-200"></div>
+                                            <!--end::Menu separator-->
+
+
+                                            <!--begin::Form-->
+                                            <div class="px-7 py-5">
+                                                <!--begin::Input group-->
+                                                <div class="mb-10">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label fw-semibold">Status:</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Input-->
+                                                    <div>
+                                                        <select class="form-select form-select-solid" multiple=""
+                                                            data-kt-select2="true" data-close-on-select="false"
+                                                            data-placeholder="Select option"
+                                                            data-dropdown-parent="#kt_menu_64eeaa5617910"
+                                                            data-allow-clear="true">
+                                                            <option></option>
+                                                            <option value="1">Approved</option>
+                                                            <option value="2">Pending</option>
+                                                            <option value="2">In Process</option>
+                                                            <option value="2">Rejected</option>
+                                                        </select>
+                                                    </div>
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+
+                                                <!--begin::Input group-->
+                                                <div class="mb-10">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label fw-semibold">Member Type:</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Options-->
+                                                    <div class="d-flex">
+                                                        <!--begin::Options-->
+                                                        <label
+                                                            class="form-check form-check-sm form-check-custom form-check-solid me-5">
+                                                            <input class="form-check-input" type="checkbox" value="1">
+                                                            <span class="form-check-label">
+                                                                Author
+                                                            </span>
+                                                        </label>
+                                                        <!--end::Options-->
+
+                                                        <!--begin::Options-->
+                                                        <label
+                                                            class="form-check form-check-sm form-check-custom form-check-solid">
+                                                            <input class="form-check-input" type="checkbox" value="2"
+                                                                checked="checked">
+                                                            <span class="form-check-label">
+                                                                Customer
+                                                            </span>
+                                                        </label>
+                                                        <!--end::Options-->
+                                                    </div>
+                                                    <!--end::Options-->
+                                                </div>
+                                                <!--end::Input group-->
+
+                                                <!--begin::Input group-->
+                                                <div class="mb-10">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label fw-semibold">Notifications:</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Switch-->
+                                                    <div
+                                                        class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            name="notifications" checked="">
+                                                        <label class="form-check-label">
+                                                            Enabled
+                                                        </label>
+                                                    </div>
+                                                    <!--end::Switch-->
+                                                </div>
+                                                <!--end::Input group-->
+
+                                                <!--begin::Actions-->
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="reset"
+                                                        class="btn btn-sm btn-light btn-active-light-primary me-2"
+                                                        data-kt-menu-dismiss="true">Reset</button>
+
+                                                    <button type="submit" class="btn btn-sm btn-primary"
+                                                        data-kt-menu-dismiss="true">Apply</button>
+                                                </div>
+                                                <!--end::Actions-->
+                                            </div>
+                                            <!--end::Form-->
+                                        </div>
+                                        <!--end::Menu 1-->
+                                        <!--end::Menu-->
+                                    </div>
+                                </div>
+                                <!--end::Header-->
+
+                                <!--begin::Body-->
+                                <div class="card-body py-3">
+                                    <ul class="nav nav-tabs nav-line-tabs mb-5 fs-6">
+                                        <li class="nav-item ">
+                                            <a class="nav-link border-3 fs-5 border-active border-success active"
+                                                data-bs-toggle="tab" href="#kt_tab_pane_1">Summary</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link border-3 fs-5 border-active border-success"
+                                                data-bs-toggle="tab" href="#kt_tab_pane_2">Detailed</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content" id="myTabContent">
+
+                                        {{-- summary active --}}
+                                        <div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel">
+                                            <div
+                                                class="row mx-3 justify-content-between border-bottom pt-4 border-default">
+
+                                                <div
+                                                    class="d-flex flex-wrap w-600px justify-content-start align-items-start px-0">
+                                                    <input type="search"
+                                                        class="form-control mb-6 w-150px w-lg-300px h-45px px-5 me-4 border-gray-400"
+                                                        placeholder="Search Here">
+
+                                                    <select
+                                                        class="form-select w-200px h-45px mb-6 me-20 border-gray-400 "
+                                                        aria-label="Select example">
+                                                        <option>Filters</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div
+                                                    class="d-flex w-150px h-45px px-0 p-1 mb-6 bg-gray-200 bordered border-gray-400 align-items-center rounded-3">
+                                                    <ul class="nav">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link btn btn-sm btn-color-white bg-success active fw-bold px-6 mx-1 me-1"
+                                                                data-bs-toggle="tab" href="#kt_tab_pane_1">Aktif</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link btn btn-sm btn-color-muted fw-bold px-5 mx-0 me-1"
+                                                                data-bs-toggle="tab"
+                                                                href="#kt_tab_pane_1_nonactive">Nonaktif</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--begin::Table container-->
+                                            <div class="table-responsive">
+                                                <!--begin::Table-->
+                                                <table id="kt_datatable_zero_configuration_1" class="table table-hover border-bottom border-top 
+                                                    pt-4 mb-4 border-gray-400 table-row-bordered table-row-gray-400 
+                                                    align-middle gy-4 gx-0">
+                                                    <!--begin::Table head-->
+                                                    <thead>
+                                                        <tr class="fw-semibold fs-4">
+                                                            <th class="pb-3 px-4 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Date</th>
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">Cabang
+                                                            </th>
+                                                            {{-- <th class="pb-3 pt-0 w-200px min-w-200px"></th> --}}
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">Store
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Employee</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">Total
+                                                                SKU</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">Total
+                                                                OOS</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">Actual
+                                                                Stock</th>
+                                                            <th class="pb-3 pt-0 text-center w-100px min-w-100px">Action
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <!--end::Table head-->
+
+                                                    <!--begin::Table body-->
+                                                    <tbody>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">10</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">3</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">3</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-100px w-md-100px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item fs-6" href="#"><i
+                                                                                    class="fa-regular fa-pen-to-square fs-6"></i>
+                                                                                Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item fs-6" href="#"><i
+                                                                                    class="fa-solid fa-trash fs-6"></i>
+                                                                                Hapus</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">10</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">3</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">3</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-200px w-md-250px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item" href="#">Pindah
+                                                                                Etalase</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <!--end::Table body-->
+
+                                                </table>
+                                                <!--end::Table-->
+                                            </div>
+                                            <!--end::Table container-->
+                                        </div>
+
+                                        {{-- summary nonactive  --}}
+                                        <div class="tab-pane fade show" id="kt_tab_pane_1_nonactive" role="tabpanel">
+                                            <div
+                                                class="row mx-3 justify-content-between border-bottom pt-4 border-default">
+
+                                                <div
+                                                    class="d-flex flex-wrap w-600px justify-content-start align-items-start px-0">
+                                                    <input type="search"
+                                                        class="form-control mb-6 w-150px w-lg-300px h-45px px-5 me-4 border-gray-400"
+                                                        placeholder="Search Here">
+
+                                                    <select
+                                                        class="form-select w-200px h-45px mb-6 me-20 border-gray-400 "
+                                                        aria-label="Select example">
+                                                        <option>Filters</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div
+                                                    class="d-flex w-150px h-45px px-0 p-1 mb-6 bg-gray-200 bordered border-gray-400 align-items-center rounded-3">
+                                                    <ul class="nav">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link btn btn-sm btn-color-muted  fw-bold px-6 mx-1 me-1"
+                                                                data-bs-toggle="tab" href="#kt_tab_pane_1">Aktif</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link btn btn-sm btn-color-white bg-success btn-active-success active fw-bold px-5 mx-0 me-1"
+                                                                data-bs-toggle="tab"
+                                                                href="#kt_tab_pane_1_nonactive">Nonaktif</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--begin::Table container-->
+                                            <div class="table-responsive">
+                                                <!--begin::Table-->
+                                                <table id="kt_datatable_zero_configuration_1_nonactive" class="table table-hover border-bottom border-top 
+                                                    pt-4 mb-4 border-gray-400 table-row-bordered table-row-muted 
+                                                    align-middle gy-4 gx-0">
+                                                    <!--begin::Table head-->
+                                                    <thead class="text-muted">
+                                                        <tr class="fw-semibold fs-4">
+                                                            <th class="pb-3 px-4 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Date</th>
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">Cabang
+                                                            </th>
+                                                            {{-- <th class="pb-3 pt-0 w-200px min-w-200px"></th> --}}
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">Store
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Employee</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">Total
+                                                                SKU</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">Total
+                                                                OOS</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">Actual
+                                                                Stock</th>
+                                                            <th class="pb-3 pt-0 text-left w-100px min-w-100px">Action
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <!--end::Table head-->
+
+                                                    <!--begin::Table body-->
+                                                    <tbody>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">10</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">3</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">3</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-200px w-md-250px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item" href="#">Pindah
+                                                                                Etalase</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">10</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">3</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">3</a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-200px w-md-250px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item" href="#">Pindah
+                                                                                Etalase</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <!--end::Table body-->
+
+                                                </table>
+                                                <!--end::Table-->
+                                            </div>
+                                            <!--end::Table container-->
+                                        </div>
+
+                                        {{-- ------------------------- --}}
+
+                                        {{-- detail active  --}}
+                                        <div class="tab-pane fade show" id="kt_tab_pane_2" role="tabpanel">
+                                            <div
+                                                class="row mx-3 justify-content-between border-bottom pt-4 border-default">
+
+                                                <div
+                                                    class="d-flex flex-wrap w-800px justify-content-start align-items-start px-0">
+                                                    <input type="search"
+                                                        class="form-control mb-6 w-150px w-lg-300px h-45px px-5 me-4 border-gray-400"
+                                                        placeholder="Search Here">
+
+                                                    <select
+                                                        class="form-select w-200px h-45px mb-6 me-4 border-gray-400 "
+                                                        aria-label="Select example">
+                                                        <option>Filters</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+
+                                                    <select class="form-select w-200px h-45px mb-6 border-gray-400 "
+                                                        aria-label="Select example">
+                                                        <option>OOS Status</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div
+                                                    class="d-flex w-150px h-45px px-0 p-1 mb-6 bg-gray-200 bordered border-gray-400 align-items-center rounded-3">
+                                                    <ul class="nav">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link btn btn-sm btn-color-white bg-success active fw-bold px-6 mx-1 me-1"
+                                                                data-bs-toggle="tab" href="#kt_tab_pane_2">Aktif</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link btn btn-sm btn-color-muted fw-bold px-5 mx-0 me-1"
+                                                                data-bs-toggle="tab"
+                                                                href="#kt_tab_pane_2_nonactive">Nonaktif</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--begin::Table container-->
+                                            <div class="table-responsive">
+                                                <!--begin::Table-->
+                                                <table id="kt_datatable_zero_configuration_2" class="table table-hover border-bottom border-top 
+                                                    pt-4 mb-4 border-gray-400 table-row-bordered table-row-gray-400 
+                                                    align-middle gy-4 gx-0">
+                                                    <!--begin::Table head-->
+                                                    <thead>
+                                                        <tr class="fw-semibold fs-4">
+                                                            <th class="pb-3 px-4 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Date</th>
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">Cabang
+                                                            </th>
+                                                            {{-- <th class="pb-3 pt-0 w-200px min-w-200px"></th> --}}
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">Store
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Employee</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Brand
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Product
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-300px min-w-300px mw-sm-300px">
+                                                                OOS Status
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">
+                                                                OOS Product Focus
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Total Package</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">Actual
+                                                                Stock</th>
+                                                            <th class="pb-3 pt-0 text-left w-100px min-w-100px">Action
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <!--end::Table head-->
+
+                                                    <!--begin::Table body-->
+                                                    <tbody>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    AXA Brand
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    Q1-Product 97</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    Product Code : 197
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Category : BF1</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Segment : Category 1</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-250px min-w-250px text-left ps-4 p-2 rounded-end rounded-0 alert alert-warning
+                                                                border-left-5 border-warning">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        Minimum Stock Not Defined
+                                                                    </a>
+                                                                </div>
+                                                                <a href="#" class="text-dark">Minimum Stock : <strong
+                                                                        class="text-danger">Not Available</strong></a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-warning
+                                                                border-left-5 border-warning">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        No
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    500 / Karton
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-success
+                                                                border-left-5 border-success">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        1440
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="pe-4 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-200px w-md-250px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item" href="#">Pindah
+                                                                                Etalase</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    AXA Brand
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    Q1-Product 97</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    Product Code : 197
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Category : BF1</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Segment : Category 1</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-250px min-w-250px text-left ps-4 p-2 rounded-end rounded-0 alert alert-danger
+                                                                border-left-5 border-danger">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        OOS
+                                                                    </a>
+                                                                </div>
+                                                                <a href="#" class="text-dark">Minimum Stock :
+                                                                    <strong>1001</strong></a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-warning
+                                                                border-left-5 border-warning">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        Yes
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    500 / -
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-success
+                                                                border-left-5 border-success">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        0
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-200px w-md-250px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item" href="#">Pindah
+                                                                                Etalase</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    AXA Brand
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    Q1-Product 97</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    Product Code : 197
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Category : BF1</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Segment : Category 1</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-250px min-w-250px text-left ps-4 p-2 rounded-end rounded-0 alert alert-primary
+                                                                border-left-5 border-primary">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        Not OOS
+                                                                    </a>
+                                                                </div>
+                                                                <a href="#" class="text-dark">Minimum Stock :
+                                                                    <strong>1001</strong></a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-warning
+                                                                border-left-5 border-warning">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        Yes
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    500 / Karton
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-success
+                                                                border-left-5 border-success">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        1001
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-200px w-md-250px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item" href="#">Pindah
+                                                                                Etalase</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                    <!--end::Table body-->
+
+                                                </table>
+                                                <!--end::Table-->
+                                            </div>
+                                            <!--end::Table container-->
+                                        </div>
+
+                                        {{-- detail nonactive  --}}
+                                        <div class="tab-pane fade show" id="kt_tab_pane_2_nonactive" role="tabpanel">
+                                            <div
+                                                class="row mx-3 justify-content-between border-bottom pt-4 border-default">
+
+                                                <div
+                                                    class="d-flex flex-wrap w-800px justify-content-start align-items-start px-0">
+                                                    <input type="search"
+                                                        class="form-control mb-6 w-150px w-lg-300px h-45px px-5 me-4 border-gray-400"
+                                                        placeholder="Search Here">
+
+                                                    <select
+                                                        class="form-select w-200px h-45px mb-6 me-4 border-gray-400 "
+                                                        aria-label="Select example">
+                                                        <option>Filters</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+
+                                                    <select class="form-select w-200px h-45px mb-6 border-gray-400 "
+                                                        aria-label="Select example">
+                                                        <option>OOS Status</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                    </select>
+                                                </div>
+
+                                                <div
+                                                    class="d-flex w-150px h-45px px-0 p-1 mb-6 bg-gray-200 bordered border-gray-400 align-items-center rounded-3">
+                                                    <ul class="nav">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link btn btn-sm btn-color-muted  fw-bold px-6 mx-1 me-1"
+                                                                data-bs-toggle="tab" href="#kt_tab_pane_2">Aktif</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link btn btn-sm btn-color-white bg-success btn-active-success active fw-bold px-5 mx-0 me-1"
+                                                                data-bs-toggle="tab"
+                                                                href="#kt_tab_pane_2_nonactive">Nonaktif</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--begin::Table container-->
+                                            <div class="table-responsive">
+                                                <!--begin::Table-->
+                                                <table id="kt_datatable_zero_configuration_2_nonactive" class="table table-hover border-bottom border-top 
+                                                    pt-4 mb-4 border-gray-400 table-row-bordered table-row-gray-400 
+                                                    align-middle gy-4 gx-0">
+                                                    <!--begin::Table head-->
+                                                    <thead>
+                                                        <tr class="fw-semibold fs-4">
+                                                            <th class="pb-3 px-4 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Date</th>
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">Cabang
+                                                            </th>
+                                                            {{-- <th class="pb-3 pt-0 w-200px min-w-200px"></th> --}}
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">Store
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Employee</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Brand
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Product
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-300px min-w-300px mw-sm-300px">
+                                                                OOS Status
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-200px">
+                                                                OOS Product Focus
+                                                            </th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">
+                                                                Total Package</th>
+                                                            <th class="pb-3 pt-0 w-150px min-w-150px mw-sm-150px">Actual
+                                                                Stock</th>
+                                                            <th class="pb-3 pt-0 text-left w-100px min-w-100px">Action
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <!--end::Table head-->
+
+                                                    <!--begin::Table body-->
+                                                    <tbody>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    AXA Brand
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    Q1-Product 97</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    Product Code : 197
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Category : BF1</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Segment : Category 1</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-250px min-w-250px text-left ps-4 p-2 rounded-end rounded-0 alert alert-warning
+                                                                border-left-5 border-warning">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        Minimum Stock Not Defined
+                                                                    </a>
+                                                                </div>
+                                                                <a href="#" class="text-dark">Minimum Stock : <strong
+                                                                        class="text-danger">Not Available</strong></a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-warning
+                                                                border-left-5 border-warning">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        No
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    500 / Karton
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-success
+                                                                border-left-5 border-success">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        1440
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="pe-4 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-200px w-md-250px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item" href="#">Pindah
+                                                                                Etalase</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    AXA Brand
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    Q1-Product 97</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    Product Code : 197
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Category : BF1</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Segment : Category 1</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-250px min-w-250px text-left ps-4 p-2 rounded-end rounded-0 alert alert-danger
+                                                                border-left-5 border-danger">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        OOS
+                                                                    </a>
+                                                                </div>
+                                                                <a href="#" class="text-dark">Minimum Stock :
+                                                                    <strong>1001</strong></a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-warning
+                                                                border-left-5 border-warning">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        Yes
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    500 / -
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-success
+                                                                border-left-5 border-success">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        0
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-200px w-md-250px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item" href="#">Pindah
+                                                                                Etalase</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-top text-left">
+                                                            <td class="ps-4 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    18/05/2023 <br> 18:00:00
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="ps-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">NUSA
+                                                                    TENGGARA</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">CENTRAL
+                                                                    / NTB</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">DC
+                                                                    NTB</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    NTB-011
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Channel : DISTRIBUTION</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Account : DISTRIBUTION</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">Rifal
+                                                                    Firdaus</a>
+                                                                <span
+                                                                    class="text-muted fw-semibold d-block fs-6">177013</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">Office
+                                                                    Boy</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    AXA Brand
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href="#"
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    Q1-Product 97</a>
+                                                                <span class="text-muted fw-semibold d-block fs-6">
+                                                                    Product Code : 197
+                                                                </span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Category : BF1</span>
+                                                                <span class="text-muted fw-semibold d-block fs-7">
+                                                                    Segment : Category 1</span>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-250px min-w-250px text-left ps-4 p-2 rounded-end rounded-0 alert alert-primary
+                                                                border-left-5 border-primary">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        Not OOS
+                                                                    </a>
+                                                                </div>
+                                                                <a href="#" class="text-dark">Minimum Stock :
+                                                                    <strong>1001</strong></a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-warning
+                                                                border-left-5 border-warning">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        Yes
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <a href=""
+                                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                                    500 / Karton
+                                                                </a>
+                                                            </td>
+
+                                                            <td class="px-0 pm-0">
+                                                                <div class="w-100px min-w-100px text-center p-2 rounded-end rounded-0 alert alert-success
+                                                                border-left-5 border-success">
+                                                                    <a href="#" class="text-dark fw-bold fs-5">
+                                                                        1001
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+
+                                                            <td class="px-0 pm-10">
+                                                                <div class="dropdown">
+                                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                                        href="#" role="button" id="dropdownMenuLink"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Atur
+                                                                    </a>
+
+                                                                    <ul class="dropdown-menu w-200px w-md-250px"
+                                                                        aria-labelledby="dropdownMenuLink">
+                                                                        <li><a class="dropdown-item" href="#">Edit</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="dropdown-divider"></div>
+                                                                        </li>
+                                                                        <li><a class="dropdown-item" href="#">Pindah
+                                                                                Etalase</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                    <!--end::Table body-->
+
+                                                </table>
+                                                <!--end::Table-->
+                                            </div>
+                                            <!--end::Table container-->
+                                        </div>
+
+                                        {{-- -------------------------  --}}
+
+                                    </div>
+                                </div>
+                                <!--end::Body-->
+                            </div>
+
+
+                            <!--begin::Footer-->
+                            <div class="footer py-4 d-flex flex-lg-column " id="kt_footer">
+                                <!--begin::Container-->
+                                <div
+                                    class=" container-fluid  d-flex flex-column flex-md-row align-items-center justify-content-between">
+                                    <!--begin::Copyright-->
+                                    <div class="text-dark order-2 order-md-1">
+                                        <span class="text-muted fw-semibold me-1">2023©</span>
+                                        <a href="https://keenthemes.com" target="_blank"
+                                            class="text-gray-800 text-hover-primary">Keenthemes</a>
+                                    </div>
+                                    <!--end::Copyright-->
+
+                                    <!--begin::Menu-->
+                                    <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
+                                        <li class="menu-item"><a href="https://keenthemes.com" target="_blank"
+                                                class="menu-link px-2">About</a></li>
+
+                                        <li class="menu-item"><a href="https://devs.keenthemes.com" target="_blank"
+                                                class="menu-link px-2">Support</a></li>
+
+                                        <li class="menu-item"><a href="https://1.envato.market/EA4JP" target="_blank"
+                                                class="menu-link px-2">Purchase</a></li>
+                                    </ul>
+                                    <!--end::Menu-->
+                                </div>
+                                <!--end::Container-->
+                            </div>
+                            <!--end::Footer-->
+                        </div>
+                        <!--end::Wrapper-->
+                    </div>
+                    <!--end::Page-->
+                </div>
                 <!--end::Content-->
                 {{-- FOOTER --}}
                 <div class="footer py-6 d-flex flex-lg-column " id="kt_footer">
@@ -1387,25 +2986,98 @@ License: For each use you must have a valid license purchased only from above li
 
 
     <!--begin::Javascript-->
+
     <script>
-        var hostUrl = "/metronic8/demo8/assets/";
+        var hostUrl = "";
+
     </script>
 
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
-    <script src="{{ asset('/metronic8/demo8/assets/plugins/global/plugins.bundle.js') }}"></script>
-    <script src="{{ asset('/metronic8/demo8/assets/js/scripts.bundle.js') }}"></script>
+    <script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
+    <script src="{{ asset('js/scripts.bundle.js') }}"></script>
     <!--end::Global Javascript Bundle-->
 
     <!--begin::Vendors Javascript(used for this page only)-->
-    <script src="{{ asset('/metronic8/demo8/assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+    <script src="{{ asset('plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+    <script src="{{ asset('plugins/custom/datatables/datatables.bundle.js') }}"></script>
+    <script>
+        $("#kt_daterangepicker_1").daterangepicker();
+        $("#kt_datatable_zero_configuration_1").DataTable();
+        $("#kt_datatable_zero_configuration_1_nonactive").DataTable();
+        $("#kt_datatable_zero_configuration_2").DataTable();
+        $("#kt_datatable_zero_configuration_2_nonactive").DataTable();
+        // $(document).ready(function () {
+        //     // Menambahkan event handler untuk tab "Aktif" di tab 1
+        //     $('[href="#kt_tab_pane_1"]').click(function (e) {
+        //         e.preventDefault();
+        //         // Menghapus kelas "active" dari tab "Aktif" jika sudah aktif
+        //         if ($(this).hasClass('active')) {
+        //             $(this).removeClass('active');
+        //         }
+        //     });
+
+        //     // Menambahkan event handler untuk tab "Nonaktif" di tab 1
+        //     $('[href="#kt_tab_pane_nonaktif"]').click(function (e) {
+        //         e.preventDefault();
+        //         // Menghapus kelas "active" dari tab "Aktif" jika sudah aktif
+        //         if ($('[href="#kt_tab_pane_1"]').hasClass('active')) {
+        //             $('[href="#kt_tab_pane_1"]').removeClass('active');
+        //         }
+        //     });
+
+        //     // Menambahkan event handler untuk tab "Aktif" di tab Nonaktif
+        //     $('[href="#kt_tab_pane_1_nonactive"]').click(function (e) {
+        //         e.preventDefault();
+        //         // Menghapus kelas "active" dari tab "Aktif" jika sudah aktif
+        //         if ($(this).hasClass('active')) {
+        //             $(this).removeClass('active');
+        //         }
+        //     });
+
+        //     // Menambahkan event handler untuk tab "Nonaktif" di tab Nonaktif
+        //     $('[href="#kt_tab_pane_1"]').click(function (e) {
+        //         e.preventDefault();
+        //         // Menghapus kelas "active" dari tab "Aktif" jika sudah aktif
+        //         if ($('[href="#kt_tab_pane_1_nonactive"]').hasClass('active')) {
+        //             $('[href="#kt_tab_pane_1_nonactive"]').removeClass('active');
+        //         }
+        //     });
+        // });
+        $(document).ready(function () {
+            function handleTabClick(tabSelector) {
+                $(tabSelector).click(function (e) {
+                    e.preventDefault();
+                    if ($(this).hasClass('active')) {
+                        $(this).removeClass('active');
+                    }
+                });
+            }
+
+            handleTabClick('[href="#kt_tab_pane_1"]');
+            handleTabClick('[href="#kt_tab_pane_1_nonactive"]');
+            handleTabClick('[href="#kt_tab_pane_2"]');
+            handleTabClick('[href="#kt_tab_pane_2_nonactive"]');
+        });
+
+    </script>
     <!--end::Vendors Javascript-->
 
     <!--begin::Custom Javascript(used for this page only)-->
-    <script src="{{ asset('/metronic8/demo8/assets/js/custom/utilities/modals/create-account.js') }}"></script>
-    <script src="{{ asset('/metronic8/demo8/assets/js/widgets.bundle.js') }}"></script>
-    <script src="{{ asset('/metronic8/demo8/assets/js/custom/widgets.js') }}"></script>
-    <script src="{{ asset('/metronic8/demo8/assets/js/custom/apps/chat/chat.js') }}"></script>
-    <script src="{{ asset('/metronic8/demo8/assets/js/custom/utilities/modals/users-search.js') }}"></script>
+    <script src="{{ asset('js/widgets.bundle.js') }}"></script>
+    <script src="{{ asset('js/custom/widgets.js') }}"></script>
+    <script src="{{ asset('js/custom/apps/chat/chat.js') }}"></script>
+    <script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
     <!--end::Custom Javascript-->
     <!--end::Javascript-->
 
